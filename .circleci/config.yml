@@ -15,7 +15,7 @@ jobs:
       - run:
           name: Trigger build for infra repo
           command: |
-            curl --location --request POST 'https://circleci.com/api/v2/project/github/Vladyslav-Stepanenko/nginx-test/pipeline' \
+            curl --location --request POST 'https://circleci.com/api/v2/project/github/Vladyslav-Stepanenko/circle-ci-builds/pipeline' \
             --header 'Content-Type: application/json' \
             -u "${API_TOKEN}"
 
