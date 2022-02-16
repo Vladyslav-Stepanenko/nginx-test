@@ -13,3 +13,8 @@ jobs:
                  --request POST "https://circleci.com/api/v2/project/github/Vladyslav-Stepanenko/circle-ci-builds/pipeline" \
                  --header "Content-Type: application/json" \
                  -u "${API_TOKEN}"
+
+workflows:
+  trigger_ami_build:
+    jobs:
+      - trigger_build
