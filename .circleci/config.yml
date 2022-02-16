@@ -7,6 +7,12 @@ jobs:
     resource_class: small
     steps:
       - run:
+          name: Install curl
+          command: |
+            apk update && \
+            apk upgrade
+            apk add curl
+      - run:
           name: Trigger build for infra repo
           command: |
             curl --location \ 
